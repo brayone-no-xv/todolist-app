@@ -27,11 +27,3 @@ deletes.onclick = () => {
   li.classList.toggle("delete");
   ul.removeChild(li);
 };
-
-for
-
-
-// function RemoveItem() {
-//     li.classList.toggle("Done");
-//     li.addEventListener("click",addItem);
-// }
