@@ -1,0 +1,8 @@
+input.onclick = () => {berubah2};
+function berubah2() {
+      input.style.backgroundColor = 'blue';
+}
+
+document.getElementById('deleteItem').onclick = () => { 
+    ul.removeChild(li);
+}
