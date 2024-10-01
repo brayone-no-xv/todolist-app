@@ -22,7 +22,7 @@ function listItem() {
   li.addEventListener("click", listItem);
 }
 
-var deletes = document.getElementById("deleteItem");
+const deletes = document.getElementById("deleteItem");
 deletes.onclick = () => {
   li.classList.toggle("delete");
   ul.removeChild(li);
