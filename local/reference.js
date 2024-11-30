@@ -38,7 +38,7 @@ function createListElement() {
 
     //ADD CLASS DELETE (DISPLAY: NONE)
     function deleteListItem(){
-        li.classList.add("delete")//this is a class that makes display: none; of the li 
+        li.classList.add("delete") //this is a class that makes display: none; of the li 
     }
     //END ADD CLASS DELETE
 }
