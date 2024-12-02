@@ -3,19 +3,20 @@ const item = document.getElementsByTagName("li");
 const ul = document.querySelector("ul"); 
 
 const enter = document.getElementById("enter");
-enter.onclick = function() {
+enter.onclick = () => {
   const li = document.createElement("li");
-  li.appendChild(document.createTextNode(input.Value));
   ul.appendChild(li);
-  input.value = " ";
+  
+  li.appendChild(document.createTextNode(input.value));
+  input.value = "";
 };
 
-li.addEventListener("click", function() {
-  li.classList.toggle("done");
-});
+// item.addEventListener("click", function() {
+//   li.classList.toggle("done");
+// });
 
 const deletes = document.getElementById("deleteItem");
 deletes.onclick = () => {
-  li.classList.toggle("delete");
-  ul.removeChild(li);
+  item.classList.toggle("delete");
+  ul.removeChild(item[0]);
 };
