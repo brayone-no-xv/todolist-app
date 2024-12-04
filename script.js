@@ -1,16 +1,23 @@
 const input = document.getElementById("userInput"); 
 const ul = document.querySelector("ul"); 
-//const task = document.getElementsByTagName("li"); 
+
+try {
+  const obj = {
+    deleteTask : document.getElementsByTagName("li"),
+  };
+} finally {
+  const task = document.getElementsByTagName("li")
+  const deletes = document.getElementById("deleteItem");
+  deletes.onclick = () => {
+    ul.removeChild(task[0]);
+  };
+};
 
 // const obj = {
 //   deleteTask : function() {
 //   return document.getElementsByTagName("li");
 //   }  
 // };
-
-const obj = {
-  deleteTask : document.getElementsByTagName("li")
-};
 
 const enter = document.getElementById("enter");
 enter.onclick = () => {
@@ -33,10 +40,5 @@ enter.onclick = () => {
 //   }
 // };
   
-  const deletes = document.getElementById("deleteItem");
-  deletes.onclick = () => {
-    ul.removeChild(obj[0]);
-    obj.shift();
-  };
   
   // obj.deleteTask();
