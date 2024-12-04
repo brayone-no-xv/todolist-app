@@ -1,44 +1,21 @@
-const input = document.getElementById("userInput"); 
-const ul = document.querySelector("ul"); 
-
-try {
-  const obj = {
-    deleteTask : document.getElementsByTagName("li"),
-  };
-} finally {
-  const task = document.getElementsByTagName("li")
-  const deletes = document.getElementById("deleteItem");
-  deletes.onclick = () => {
-    ul.removeChild(task[0]);
-  };
-};
-
-// const obj = {
-//   deleteTask : function() {
-//   return document.getElementsByTagName("li");
-//   }  
-// };
-
+const input = document.getElementById("userInput");         
+        
 const enter = document.getElementById("enter");
-enter.onclick = () => {
+  enter.onclick = () => {
   const li = document.createElement("li");
   ul.appendChild(li);
   li.appendChild(document.createTextNode(input.value));
   input.value = "";
 };
 
-// const tesId = {
-//   getElementById : (enter) => document.getElementById(enter), 
-// }
+const myObject = {
+  item : document.getElementsByTagName("li"), 
+  delete() {
+  const ul = document.querySelector("ul"); 
+  ul.removeChild(this.item[0]);
+  },
+};
 
-// const myObject = {
-//   enter: () => {
-//     const li = document.createElement("li");
-//     ul.appendChild(li);
-//     li.appendChild(document.createTextNode(input.value));
-//     input.value = "";  
-//   }
-// };
-  
-  
-  // obj.deleteTask();
+document.getElementById("delete").onclick = () => {
+  myObject.delete();
+};
