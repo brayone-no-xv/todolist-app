@@ -2,9 +2,12 @@ const input = document.getElementById("userInput");
 const ul = document.querySelector("ul"); 
 
 try {
-  const obj = {
-    deleteTask : document.getElementsByTagName("li"),
-  };
+  // const repeat = [1,2,3];
+
+  // for (const property of object) {
+  //   console.log(`${property}: ${repeat[property]}`);
+  // }
+
 } finally {
   const task = document.getElementsByTagName("li")
   const deletes = document.getElementById("deleteItem");
@@ -13,17 +16,11 @@ try {
   };
 };
 
-const strip = {
-  test() {
-    document.getElementById("li").innerHTML;
-    document.getElementsByTagName("li").innerText = "1";
-  }
-}
-
 const enter = document.getElementById("enter");
-enter.onclick = () => {
+enter.ondblclick = () => {
   const li = document.createElement("li");
   ul.appendChild(li);
   li.appendChild(document.createTextNode(input.value));
-  input.value = strip.test() + "";
+  input.value = "";
+  console.alert('tes');
 };
