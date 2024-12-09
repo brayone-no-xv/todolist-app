@@ -21,13 +21,22 @@
             <input
               type="text"
               id="userInput"
-              placeholder="New Item..."
+              placeholder="Add Item..."
               maxlength="150"
+              required
             />
             <br />
-            <button id="enter" style="margin-top: 10px">Enter</button>
-            <button id="deleteItem" class="delete">Delete</button>
+            <div class="button">
+              <input id="enter" type="button" value="Enter" />
+              <input
+                id="deleteItem"
+                type="button"
+                value="Delete"
+                class="delete"
+              />
+            </div>
           </div>
+
           <div class="listItems">
             <ul></ul>
           </div>
