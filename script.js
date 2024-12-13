@@ -1,17 +1,20 @@
-const input = document.getElementById("userInput");
-const ul = document.querySelector("ul");
-const task = document.getElementsByTagName("li");
+// ambil elemen DOm
+const BtnAddTask = document.getElementById("InputData");
+const Tasklist = document.querySelector("ul");
+const TaskItems = document.getElementsByTagName("li");
+const InputTask = document.getElementById("id_item");
+const BtnDeleteTask = document.getElementById("delete_item");
 
-const enter = document.getElementById("enter");
-enter.ondblclick = () => {
-  const li = document.createElement("li");
-  ul.appendChild(li);
-  li.appendChild(document.createTextNode(input.value));
+// Nambah Item
+InputTask.ondblclick = () => {
+  const newLi = document.createElement("li");
+  ulTask.appendChild(newLi);
+  newItem.appendChild(document.createTextNode(input.value));
   input.value = "";
   console.alert("tes");
 };
 
-const deletes = document.getElementById("deleteItem");
-deletes.onclick = () => {
-  ul.removeChild(task[0]);
+// Hapus Item
+BtnDeleteTask.onclick = () => {
+  Tasklist.removeChild(TaskItems[0]);
 };
