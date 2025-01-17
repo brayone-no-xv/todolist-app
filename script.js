@@ -6,7 +6,7 @@ if (typeof Storage !== "undefined") {
     sessionStorage.setItem(sessionStorageKey, 0);
   }
 
-  // ambil elemen DOm
+  // ambil elemen 
   const inputTeks = document.getElementById("InputData");
   const Tasklist = document.querySelector("ul");
   const TaskListItem = document.getElementsByTagName("li");
